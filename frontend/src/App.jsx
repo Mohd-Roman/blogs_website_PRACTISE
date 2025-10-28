@@ -8,17 +8,16 @@ import Signup from './pages/Signup'
 import Navbar from './components/Navbar'
 
 const router = createBrowserRouter([
-  {path:'/',element:<Home/>},
-  {path:'/blogs',element:<Blog/>},
-  {path:'/about',element:<About/>},
-  {path:'/login',element:<Login/>},
-  {path:'/signup',element:<Signup/>},
+  {path:'/',element:<Navbar><Home/></Navbar>},
+  {path:'/blogs',element:<Navbar><Blog/></Navbar>},
+  {path:'/about',element:<Navbar><About/></Navbar>},
+  {path:'/login',element:<Navbar><Login/></Navbar>},
+  {path:'/signup',element:<Navbar><Signup/></Navbar>},
 ])
 
 function App() {
   return (
     <>
-    <Navbar/>
     <RouterProvider router={router}/>
     </>
   )
